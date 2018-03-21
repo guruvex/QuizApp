@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pageflipper"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context="example.android.quizapp.MainActivity">
+
+    <ScrollView
+        android:id="@+id/intropage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:screenOrientation="portrait">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView style="@style/CustomImage" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/totalscore"
+                    style="@style/CustomTextBox" />
+
+                <Button
+                    style="@style/CustomButton"
+                    android:onClick="onWord"
+                    android:text="@string/onword" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <!-- radio button screen -->
+    <ScrollView
+        android:id="@+id/radiobuttonpage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:screenOrientation="portrait">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView style="@style/CustomImagetwo" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/radioquestion"
+                    style="@style/CustomTextBox" />
+
+                <RadioGroup
+                    android:id="@+id/radiogroupbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/radioanswer1"
+                        style="@style/CustomView" />
+
+                    <RadioButton
+                        android:id="@+id/radioanswer2"
+                        style="@style/CustomView" />
+
+                    <RadioButton
+                        android:id="@+id/radioanswer3"
+                        style="@style/CustomView" />
+
+                    <RadioButton
+                        android:id="@+id/radioanswer4"
+                        style="@style/CustomView" />
+
+                </RadioGroup>
+
+                <Button
+                    style="@style/CustomButton"
+                    android:onClick="pressAnswers"
+                    android:text="@string/submit" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <!-- checkbox screen -->
+    <ScrollView
+        android:id="@+id/checkboxpage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:screenOrientation="portrait">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView style="@style/CustomImagetwo" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/checkquestion"
+                    style="@style/CustomTextBox" />
+
+                <CheckBox
+                    android:id="@+id/checkanswer1"
+                    style="@style/CustomView" />
+
+                <CheckBox
+                    android:id="@+id/checkanswer2"
+                    style="@style/CustomView" />
+
+                <CheckBox
+                    android:id="@+id/checkanswer3"
+                    style="@style/CustomView" />
+
+                <CheckBox
+                    android:id="@+id/checkanswer4"
+                    style="@style/CustomView" />
+
+                <Button
+                    style="@style/CustomButton"
+                    android:onClick="pressAnswers"
+                    android:text="@string/submit" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <!-- fill in the blank screen -->
+    <ScrollView
+        android:id="@+id/editpage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:screenOrientation="portrait">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView style="@style/CustomImagetwo" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/editquestion"
+                    style="@style/CustomTextBox" />
+
+                <EditText
+                    android:id="@+id/edituserinput"
+                    style="@style/CustomEdit" />
+
+                <Button
+                    style="@style/CustomButton"
+                    android:onClick="pressAnswers"
+                    android:text="@string/submit" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <!-- image question -->
+    <ScrollView
+        android:id="@+id/imagepage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:screenOrientation="portrait">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView style="@style/CustomImagetwo" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/imagequestion"
+                    style="@style/CustomTextBox" />
+
+                <ImageView
+                    android:id="@+id/imagepicture"
+                    android:layout_width="200sp"
+                    android:layout_height="200sp"
+                    android:layout_margin="10sp"
+                    android:adjustViewBounds="true"
+                    android:freezesText="true"
+                    android:src="@drawable/voljin" />
+
+                <CheckBox
+                    android:id="@+id/imagecheckanswer1"
+                    style="@style/CustomView" />
+
+                <CheckBox
+                    android:id="@+id/imagecheckanswer2"
+                    style="@style/CustomView" />
+
+                <CheckBox
+                    android:id="@+id/imagecheckanswer3"
+                    style="@style/CustomView" />
+
+                <CheckBox
+                    android:id="@+id/imagecheckanswer4"
+                    style="@style/CustomView" />
+
+                <Button
+                    style="@style/CustomButton"
+                    android:onClick="pressAnswers"
+                    android:text="@string/submit" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</ViewFlipper>
